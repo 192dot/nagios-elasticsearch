@@ -61,7 +61,7 @@ class ESSplitBrainCheck(NagiosCheck):
                 raise Status('OK', "%d/%d nodes have same master"
                             % (len(responding_nodes), len(nodes)))
             else:
-                raise Status('OK', "%d/%d nodes have same master\r\n"
+                raise Status('Warning', "%d/%d nodes have same master\r\n"
                             "%d unresponsive nodes:\r\n%s"
                             % (len(responding_nodes),
                                 len(nodes),
