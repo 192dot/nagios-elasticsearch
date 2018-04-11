@@ -48,8 +48,8 @@ class ESSplitBrainCheck(NagiosCheck):
 
         if len(responding_nodes) == 0:
             raise Status('Unknown',
-                        "All cluster nodes unresponsive:\r\n"
-                        "%s" % (str("\r\n".join(failed_nodes))))
+                         "All cluster nodes unresponsive:\r\n"
+                         "%s" % (str("\r\n".join(failed_nodes))))
         elif len(masters) != 1:
             raise Status('Critical', "%d masters (%s) found in %s cluster"
                          % (len(masters),
@@ -59,14 +59,14 @@ class ESSplitBrainCheck(NagiosCheck):
         else:
             if len(failed_nodes) == 0:
                 raise Status('OK', "%d/%d nodes have same master"
-                            % (len(responding_nodes), len(nodes)))
+                             % (len(responding_nodes), len(nodes)))
             else:
-                raise Status('Warning', "%d/%d nodes have same master\r\n"
-                            "%d unresponsive nodes:\r\n%s"
-                            % (len(responding_nodes),
-                                len(nodes),
-                                len(failed_nodes),
-                                str("\r\n".join(failed_nodes))))
+                raise Status('Warning', "%d/%d nodes have same master\r\n""
+                                        "%d unresponsive nodes:\r\n%s"
+                                        % (len(responding_nodes),
+                                           len(nodes),
+                                           len(failed_nodes),
+                                           str("\r\n".join(failed_nodes))))
 
 if __name__ == "__main__":
     ESSplitBrainCheck().run()
