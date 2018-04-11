@@ -15,7 +15,6 @@ setup(
     author='Paul Stack',
     author_email='public@paulstack.co.uk',
     url="https://github.com/stack72/nagios-elasticsearch",
-    download_url='http://github.com/stack72/nagios-elasticsearch/tarball/0.1.4',
     scripts=["check_es_nodes.py",
              "check_es_cluster_status.py",
              "check_es_jvm_usage.py",
