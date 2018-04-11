@@ -3,7 +3,7 @@
 A few simple scripts for checking the state of your [ElasticSearch] cluster using Nagios the  endpoints of ElasticSearch
 
 [![Build
-Status](https://secure.travis-ci.org/opentable/nagios-elasticsearch.png)](https://secure.travis-ci.org/opentable/nagios-elasticsearch.png)
+Status](https://travis-ci.org/192dot/nagios-elasticsearch.svg?branch=master)](https://secure.travis-ci.org/opentable/nagios-elasticsearch.png)
 
 ## How they work
 
